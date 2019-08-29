@@ -1,0 +1,40 @@
+@startuml
+caption 观察者模式
+abstract class Subject {
+    - List<Observer> observers
+    + add(Observer o):void
+    + remove(Observer o):void
+    # notifyObserver():void
+}
+
+class ConcreteSubject extends Subject {
+    - String mess
+    + notifyObserver():void
+    + change():void
+}
+
+note as N1
+public void notifyObserver() {
+    for (Observer o : observers) {
+        o.response(this.mess);
+    }
+}
+
+public void change(String mess){
+    this.mess = mess;
+    notifyObserver();
+}
+end note
+ConcreteSubject .. N1
+
+
+interface Observer {
+    + response(Object data):void
+}
+
+class ConcreteObserver implements Observer {
+    + response(Object data):void
+}
+Observer -right--o Subject
+
+@enduml

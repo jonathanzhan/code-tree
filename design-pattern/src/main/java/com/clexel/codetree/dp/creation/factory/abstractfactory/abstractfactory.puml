@@ -1,0 +1,62 @@
+@startuml
+
+interface product1{
+    + show():void
+}
+
+interface product2{
+    + show():void
+}
+
+
+interface Factory{
+    + newProduct1():product1
+    + newProduct2():product2
+}
+
+Factory <..> product1
+Factory <..> product2
+
+class ConcreteFactory1{
+    + newProduct1():product1
+    + newProduct2():product2
+}
+
+class ConcreteFactory2{
+    + newProduct1():product1
+    + newProduct2():product2
+}
+
+ConcreteFactory1 ..^ Factory
+ConcreteFactory2 ..^ Factory
+
+
+
+class ConcreteProduct11{
+    + show():void
+}
+
+class ConcreteProduct12{
+    + show():void
+}
+
+class ConcreteProduct21{
+    + show():void
+}
+
+class ConcreteProduct22{
+    + show():void
+}
+
+ConcreteProduct11 ..^ product1
+ConcreteProduct12 ..^ product1
+
+ConcreteProduct21 ..^ product2
+ConcreteProduct22 ..^ product2
+
+ConcreteFactory1 ..> ConcreteProduct11
+ConcreteFactory1 ..> ConcreteProduct12
+
+ConcreteFactory2 ..> ConcreteProduct21
+ConcreteFactory2 ..> ConcreteProduct22
+@enduml

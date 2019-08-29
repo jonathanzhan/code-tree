@@ -1,0 +1,14 @@
+@startuml
+
+class Teacher{
+    -name:String
+    -students:List<Student>
+}
+
+class Student{
+    -name:String
+}
+
+Teacher --> Student
+
+@enduml

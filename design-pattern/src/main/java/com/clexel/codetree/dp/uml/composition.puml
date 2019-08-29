@@ -1,0 +1,12 @@
+@startuml
+
+class Head{
+    - mouth:Mouth
+}
+
+class Mouth{
+    + eat():void
+}
+
+Head *-- Mouth
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+
+class Teacher{
+    -name:String
+    -students:List<Student>
+}
+
+Teacher --> Teacher
+
+@enduml

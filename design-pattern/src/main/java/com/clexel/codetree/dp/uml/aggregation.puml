@@ -1,0 +1,11 @@
+@startuml
+class School{
+    - teachers:List<Teacher>
+}
+
+class Teacher{
+    - name:String
+}
+School o-- Teacher
+
+@enduml

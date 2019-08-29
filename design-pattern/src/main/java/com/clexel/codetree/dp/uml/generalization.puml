@@ -1,0 +1,20 @@
+@startuml
+
+class Person{
+    - name:String
+    - age:int
+    + speak():void
+}
+
+class Student{
+    + study():void
+}
+
+class Teacher{
+    + teach():void
+}
+
+Student -left--|> Person
+Teacher -right--|> Person
+
+@enduml

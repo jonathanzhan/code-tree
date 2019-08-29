@@ -1,0 +1,10 @@
+@startuml
+
+class Person{
+    - name:String
+    - age:int
+    + setName(String name):void
+    + getName():String
+}
+
+@enduml

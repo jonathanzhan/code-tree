@@ -1,0 +1,17 @@
+@startuml
+
+interface Car{
+    + display():void
+}
+
+class BenzhCar{
+    + display():void
+}
+
+class BmwCar{
+    + display():void
+}
+
+BenzhCar..|>Car
+BmwCar..|>Car
+@enduml
