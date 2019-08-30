@@ -1,7 +1,0 @@
-@startuml
-
-interface List {
-    size():int
-}
-
-@enduml

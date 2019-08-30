@@ -27,7 +27,6 @@
 
     <modules>
         <module>java</module>
-        <module>design-pattern</module>
     </modules>
 
     <properties>
